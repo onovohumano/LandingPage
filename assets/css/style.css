@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,49 @@ body {
   height: 100vh;
   font-family: Century Gothic, Lucida Grande;
   background-color: #202629;
+} */
+
+* {
+  box-sizing: border-box;
 }
+
+.brandlogo {
+  width: 90px;
+}
+
+.banner {
+  background-color: #033BA7;
+  color: #fff;
+  padding: 5% 10%;
+  height: fit-content;
+  flex-flow: nowrap;
+}
+
+.cta-watch-now {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient( #18DEA6, #1896A6);
+  border-radius: 5px;
+  padding: 20px;
+  width: fit-content;
+}
+
+.cta-watch-now img {
+  margin-left: 20px;
+  width: 50px;
+}
+
+.social-media {
+  align-self: flex-end;
+}
+
+.banner-img {
+  max-width: 400px;
+}
+
+/* 
+
 .countdown {
   display: flex;
 }
@@ -26,4 +68,4 @@ body {
   display: block;
   font-size: 2vw;
   color: #8a99ab;
-}
+} */
