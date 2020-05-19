@@ -57,8 +57,8 @@ const addZero = (x) => (x < 10 && x >= 0) ? "0"+x : x;
 
 const mylittlething_countdown = new countdown({
   target: '.countdown',
-  dayWord: 'dias',
-  hourWord: 'horas',
-  minWord: 'minutos',
-  secWord: 'segundos'
+  dayWord: 'Dias',
+  hourWord: 'Horas',
+  minWord: 'Minutos',
+  secWord: 'Segundos'
 });
