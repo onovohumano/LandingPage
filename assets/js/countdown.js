@@ -1,64 +1,43 @@
-const $ = elem => document.querySelector(elem);
-
-const countdown = function(_config) {
-  const tarDate = $(_config.target).getAttribute('data-date').split('-');
-  const day = parseInt(tarDate[0]);
-  const month = parseInt(tarDate[1]);
-  const year = parseInt(tarDate[2]);
-  let tarTime = $(_config.target).getAttribute('data-time');
-  let tarhour, tarmin;
-  
-  if (tarTime != null) {    
-    tarTime = tarTime.split(':');
-    tarhour = parseInt(tarTime[0]);
-    tarmin = parseInt(tarTime[1]);
-  }
-
-  let dateNow = new Date();
-  
-  // Set the date we're counting down to
-  const countDownDate = new Date(year, month-1, day, tarhour, tarmin, 0, 0).getTime();
-
-  $(_config.target+' .day .word').innerHTML = _config.dayWord;
-  $(_config.target+' .hour .word').innerHTML = _config.hourWord;
-  $(_config.target+' .min .word').innerHTML = _config.minWord;
-  $(_config.target+' .sec .word').innerHTML = _config.secWord; 
-  
-  const updateTime = () => {
-    // Get todays date and time
-    const now = new Date().getTime();
-
-    // Find the distance between now an the count down date
-    const distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // If the count down is over, write some text 
-    if (distance < 0) {
-      $(".countdown").innerHTML = "<h1>TEMPO ESGOTADO</h1>";
-    } else {
-      requestAnimationFrame(updateTime);
-
-      $(_config.target+' .day .num').innerHTML = addZero(days);
-      $(_config.target+' .hour .num').innerHTML = addZero(hours);
-      $(_config.target+' .min .num').innerHTML = addZero(minutes);
-      $(_config.target+' .sec .num').innerHTML = addZero(seconds);
-    }
-  }
-  
-  updateTime();
+function missingTime() {
+  let eventDate = new Date("May, 22, 2020 11:59:00")
+  let today = new Date()
+  return eventDate - today
 }
 
-const addZero = (x) => (x < 10 && x >= 0) ? "0"+x : x;
+function days() {
+  let days = Math.floor( missingTime() / (1000 * 60 * 60 * 24));
+  document.querySelector(".day > .num").innerHTML = days > 9 ? days : `0${days}`;
+}
+function hours() {
+  const hours = Math.floor(( missingTime() % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  document.querySelector(".hour > .num").innerHTML = hours > 9 ? hours : `0${hours}`;
+}
+function minutes() {
+  const minutes = Math.floor((missingTime() % (1000 * 60 * 60)) / (1000 * 60));
+  document.querySelector(".min > .num").innerHTML = minutes > 9 ? minutes : `0${minutes}`;
+}
+function seconds() {
+  const seconds = Math.floor((missingTime() % (1000 * 60)) / 1000);
+  document.querySelector(".sec > .num").innerHTML = seconds > 9 ? seconds : `0${seconds}`;
+}
 
-const mylittlething_countdown = new countdown({
-  target: '.countdown',
-  dayWord: 'Dias',
-  hourWord: 'Horas',
-  minWord: 'Minutos',
-  secWord: 'Segundos'
-});
+function expired() {
+  document.querySelector(".countdown").innerHTML = '<span class="expired">TEMPO ESGOTADO!</span>';
+}
+
+function updateTime() {
+  if(missingTime() > 0){
+    setTimeout(function() {
+      days()
+      hours()
+      minutes()
+      seconds()
+      updateTime()
+
+    }, 1000)
+  } else {
+    expired()
+  }
+}
+
+updateTime()
