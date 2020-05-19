@@ -1,29 +1,123 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: row;
-  height: 100vh;
-  font-family: Century Gothic, Lucida Grande;
-  background-color: #202629;
+* {
+  box-sizing: border-box !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
 }
-.countdown {
-  display: flex;
+
+section{
+  padding: 60px 0 0 0;
 }
-.countdown span, .countdown h1 {
-  color: #2799ff;
+section:first-child {
+  padding-bottom: 60px;
 }
-.countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
-  padding: 1vw 3vw;
+section > .row {
+  padding: 0 5vw;
+}
+
+.brandlogo {
+  width: 90px;
+}
+
+#banner {
+  background-color: #033BA7;
+  color: #fff;
+  height: fit-content;
+}
+
+.cta-watch-now {
+  display: block;
   text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient( #18DEA6, #1896A6);
+  border-radius: 5px;
+  padding: 20px;
+  width: fit-content;
+}
+
+.cta-watch-now svg {
+  margin-left: 20px;
+  width: 50px;
+}
+
+.cta-watch-now:hover {
+  text-decoration: none;
+  color: #033BA7;
+  background-image: linear-gradient( #1896A6, #18DEA6);
+}
+
+.cta-watch-now:hover svg path {
+  fill: #033BA7;
+}
+
+.cta-container {
+  justify-self: flex-end;
+  margin-top: 20%;
+}
+
+/* .cta-watch-now img {
+  margin-left: 20px;
+} */
+
+.banner-img {
+  height: 100%;
+  width: 100%;
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding-left: 70px;
+}
+
+/*Programacao*/
+
+.video {
+  border: 1px solid #000;
+  width: 100%;
+}
+
+@media (max-width: 764px) {
+  .banner {
+    padding: 7.5vh 5vw;
+  }
+  .img-banner-content {
+    display: none;
+  }
+  .social-media img {
+    width: 30px;
+  }
+}
+ 
+.countdown span, .countdown h1 {
+  color: #fff;
+}
+
+.countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
+  /* padding: 1vw 3vw; */
+  text-align: center;
+  padding: 0 10px;
+  width: 100px;
 }
 .countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
   display: block;
-  font-size: 8vw;
+  font-size: 3em;
+  font-weight: 600;
   line-height: 1em;
+  background-color: #033BA7;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word {
   display: block;
-  font-size: 2vw;
-  color: #8a99ab;
+  font-size: 1em;
+  color: #033BA7;
+} 
+
+/*footer*/
+footer {
+  height: 55px;
+  background-color: #033BA7;
+}
+
+footer .row {
+  padding: 0 5vw;
+  height: 100%;
 }
