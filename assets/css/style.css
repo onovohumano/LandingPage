@@ -1,21 +1,17 @@
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: row;
-  height: 100vh;
-  font-family: Century Gothic, Lucida Grande;
-  background-color: #202629;
-} */
-
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   font-family: 'Montserrat', sans-serif;
   font-size: 100%;
 }
 
-.container-fluid {
-  padding: 0;
+section{
+  padding: 60px 0 0 0;
+}
+section:first-child {
+  padding-bottom: 60px;
+}
+section > .row {
+  padding: 0 5vw;
 }
 
 .brandlogo {
@@ -25,18 +21,11 @@
 #banner {
   background-color: #033BA7;
   color: #fff;
-  padding: 10vh 10vw;
   height: fit-content;
 }
 
-#programacao {
-  /* background-color: #033BA7; */
-  /* color: #fff; */
-  padding: 0 10vw;
-  /* height: fit-content; */
-}
-
 .cta-watch-now {
+  display: block;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -55,24 +44,12 @@
   margin-left: 20px;
 }
 
-.social-media {
-  /* height: 100%; */
-  /* margin-top: auto; */
-  /* margin-bottom: auto; */
-  /* align-self: flex-end; */
-  /* justify-self: flex-start; */
-}
-
-/* .social-media img {
-  align-self: center;
-  justify-self: center;
-} */
-
 .banner-img {
   height: 100%;
   width: 100%;
   justify-self: flex-end;
   align-self: flex-end;
+  padding-left: 70px;
 }
 
 /*Programacao*/
@@ -102,6 +79,7 @@
  
 .countdown span, .countdown h1 {
   color: #fff;
+  /* width: 100%; */
 }
 
 .countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
@@ -129,9 +107,9 @@
 footer {
   height: 55px;
   background-color: #033BA7;
-  padding: 0 10vw;
 }
 
-footer > div {
+footer .row {
+  padding: 0 5vw;
   height: 100%;
 }

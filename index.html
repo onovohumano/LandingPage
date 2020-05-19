@@ -13,55 +13,51 @@
 
 <body>
 
-  <main class="container-fluid">
+  <main>
 
-    <section id="banner" class="row">
+    <section id="banner" class="container-fluid">
 
-        <div class="banner">
-          <div class="row">
-
-            <div class="col-12 d-flex flex-row justify-content-between align-items-start">
-              <div>
-                <img class="brandlogo" src="./assets/img/logo.svg" alt="Logo O Novo Humano">
-              </div>
-
-              <div class="social-media">
-                <img class="mr-1" src="./assets/img/facebook.svg" alt="facebook">
-                <img src="./assets/img/instagram.svg" alt="instafram">
-              </div>
+        <div class="row">
+          <div class="col-12 d-flex flex-row justify-content-between align-items-start">
+            <div>
+              <img class="brandlogo" src="./assets/img/logo.svg" alt="Logo O Novo Humano">
+            </div>
+            <div class="social-media">
+              <img class="mr-1" src="./assets/img/facebook.svg" alt="facebook">
+              <img src="./assets/img/instagram.svg" alt="instafram">
             </div>
           </div>
+        </div>
 
-          <div class="row">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-between">
 
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-between align-items-between">
-
-              <div class="">
-                <h1 class="my-4">O NOVO HUMANO</h1>
-                <p class="text-justify">Trazemos uma série <strong>online</strong> e <strong>gratuita</strong> com o intuito de refletir sobre como será o novo ambiente de trabalho, relacionamentos interpessoais, propósito e o que realmente mudou. 
-                </p>
-              </div>
-
-              <div class="cta-container">
-                <a href="#programacao" class="cta-watch-now">ASSISTIR AGORA<img src="./assets/img/arrow.svg"></a>
-              </div>
-
+            <div class="">
+              <h1 class="my-4">O NOVO HUMANO</h1>
+              <p class="text-justify">Trazemos uma série <strong>online</strong> e <strong>gratuita</strong> com o intuito de refletir sobre como será o novo ambiente de trabalho, relacionamentos interpessoais, propósito e o que realmente mudou. 
+              </p>
             </div>
 
-            <div class="col-md-5 offset-md-1 d-flex flex-column justify-content-end">
-              <div class="img-banner-content">
-                <img class="banner-img" src="./assets/img/brain.svg" alt="brain">
-              </div>
+            <div class="cta-container">
+              <a href="#programacao" class="cta-watch-now">ASSISTIR AGORA<img src="./assets/img/arrow.svg"></a>
             </div>
 
           </div>
 
-      </div>
+          <div class="col-12 col-md-5 offset-md-1 d-flex flex-column justify-content-end">
+            <div class="img-banner-content">
+              <img class="banner-img" src="./assets/img/brain.svg" alt="brain">
+            </div>
+          </div>
+
+        </div>
+
+
     </section>
 
-    <section id="programacao" class="my-5">
+    <section id="programacao" class="container-fluid">
 
-      <div class="row d-flex flex-column text-center my-5">
+      <div class="row d-flex flex-column text-center mb-5">
         <h2>Programação</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -87,21 +83,26 @@
       </div>
     </section>
 
-    <section id="countdown" class="my-5">
+    <section id="countdown" class="container-fluid">
 
-      <div class="row d-flex flex-column align-items-center">
-        <h2>Assita o quanto antes!</h2>
-        <p>Os vídeos sairão do ar em:</p>
+      <div class="row">
+        <div class="col-12 d-flex flex-column align-items-center">
+          <h2>Assita o quanto antes!</h2>
+          <p>Os vídeos sairão do ar em:</p>
+        </div>
       </div>
 
       <div class="row">
-        <div class="countdown d-flex mx-auto" data-date="22-5-2020" data-time="00:00">
-          <div class="day"><span class="num"></span><span class="word"></span></div>
-          <div class="hour"><span class="num"></span><span class="word"></span></div>
-          <div class="min"><span class="num"></span><span class="word"></span></div>
-          <div class="sec"><span class="num"></span><span class="word"></span></div>
+        <div class="col-12 d-flex justify-content-center">
+          <div class="countdown d-flex" data-date="22-5-2020" data-time="00:00">
+            <div class="day"><span class="num"></span><span class="word"></span></div>
+            <div class="hour"><span class="num"></span><span class="word"></span></div>
+            <div class="min"><span class="num"></span><span class="word"></span></div>
+            <div class="sec"><span class="num"></span><span class="word"></span></div>
+          </div>
         </div>
       </div>
+
     </section>
 
     <hr>
@@ -110,14 +111,18 @@
 
     </section>
 
-    <footer>
-      <div class="col-12 d-flex flex-row justify-content-end align-items-center">
-        <div class="social-media">
-          <img class="mr-1" src="./assets/img/facebook.svg" alt="facebook">
-          <img src="./assets/img/instagram.svg" alt="instafram">
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-flex flex-row justify-content-end align-items-center">
+          <div class="social-media">
+            <img class="mr-1" src="./assets/img/facebook.svg" alt="facebook">
+            <img src="./assets/img/instagram.svg" alt="instafram">
+          </div>
         </div>
       </div>
     </footer>
+
+  </main>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -141,7 +146,7 @@
       </div>
     </div>
 
-  </main>
+  <!-- </main> -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
