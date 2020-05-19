@@ -7,6 +7,9 @@
   font-family: Century Gothic, Lucida Grande;
   background-color: #202629;
 } */
+body {
+  font-family: 'Montserrat';
+}
 
 * {
   box-sizing: border-box;
@@ -55,6 +58,34 @@
   justify-self: flex-end;
   align-self: flex-end;
 }
+/*
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  left: 0px;
+  bottom: 0px;
+  background: #033BA7;
+}
+
+.footer-face {
+  position: absolute;
+  left: 86.53%;
+  right: 12.06%;
+  top: 98.54%;
+  bottom: 0.66%;
+  background: #F0F0
+}
+
+.footer-insta {
+  position: absolute;
+  left: 88.61%;
+  right: 10%;
+  top: 98.54%;
+  bottom: 0.67%;
+  background: #F0F0F0;
+}
+*/
 
 @media (max-width: 764px) {
   .banner {
