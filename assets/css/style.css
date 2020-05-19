@@ -102,6 +102,11 @@ section > .row {
   color: #033BA7;
 }
 
+/*nps*/
+#nps {
+  background-color: #033BA7;
+}
+
 /*footer*/
 footer {
   height: 55px;
