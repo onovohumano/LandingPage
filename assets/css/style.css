@@ -35,14 +35,29 @@ section > .row {
   width: fit-content;
 }
 
+.cta-watch-now svg {
+  margin-left: 20px;
+  width: 50px;
+}
+
+.cta-watch-now:hover {
+  text-decoration: none;
+  color: #033BA7;
+  background-image: linear-gradient( #1896A6, #18DEA6);
+}
+
+.cta-watch-now:hover svg path {
+  fill: #033BA7;
+}
+
 .cta-container {
   justify-self: flex-end;
   margin-top: 20%;
 }
 
-.cta-watch-now img {
+/* .cta-watch-now img {
   margin-left: 20px;
-}
+} */
 
 .banner-img {
   height: 100%;
@@ -70,16 +85,9 @@ section > .row {
     width: 30px;
   }
 }
-
-
-/*counterdown*/
-/* .countdown {
-  display: flex;
-} */
  
 .countdown span, .countdown h1 {
   color: #fff;
-  /* width: 100%; */
 }
 
 .countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
