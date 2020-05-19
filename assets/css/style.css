@@ -10,6 +10,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
   font-size: 100%;
 }
 
@@ -17,11 +18,18 @@
   width: 90px;
 }
 
-.banner {
+#banner {
   background-color: #033BA7;
   color: #fff;
   padding: 10vh 10vw;
   height: fit-content;
+}
+
+#programacao {
+  /* background-color: #033BA7; */
+  /* color: #fff; */
+  padding: 0 10vw;
+  /* height: fit-content; */
 }
 
 .cta-watch-now {
@@ -56,6 +64,13 @@
   align-self: flex-end;
 }
 
+/*Programacao*/
+
+.video {
+  border: 1px solid #000;
+  width: 100%;
+}
+
 @media (max-width: 764px) {
   .banner {
     padding: 7.5vh 5vw;
@@ -68,11 +83,12 @@
   }
 }
 
-/* 
 
+/*counterdown*/
 .countdown {
   display: flex;
 }
+/* 
 .countdown span, .countdown h1 {
   color: #2799ff;
 }
