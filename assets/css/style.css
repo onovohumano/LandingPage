@@ -5,11 +5,6 @@
   font-size: 100%;
 }
 
-h1 {
-  /* font-size: 2em; */
-  /* white-space: nowrap; */
-}
-
 section{
   padding: 60px 0 0 0;
 }
@@ -92,7 +87,7 @@ section > .row {
   padding: 0 1%;
   width: 100px;
 }
-.countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
+.countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num, .expired {
   display: block;
   font-size: 3em;
   font-weight: 600;
@@ -105,7 +100,12 @@ section > .row {
   display: block;
   font-size: 1em;
   color: #033BA7;
-} 
+}
+
+/*nps*/
+#nps {
+  background-color: #033BA7;
+}
 
 /*footer*/
 footer {
@@ -140,10 +140,10 @@ footer .row {
   .countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
     width: 70px;
   }
-  .countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
+  .countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num{
     font-size: 2em;
   }
-  .countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word {
+  .countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word, .expired {
     font-size: .7em;
   }
 }
@@ -172,7 +172,7 @@ footer .row {
   .countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
     font-size: 2.5em;
   }
-  .countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word {
+  .countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word, .expired {
     font-size: .75em;
   } 
 }
