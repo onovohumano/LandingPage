@@ -1,11 +1,11 @@
 function missingTime() {
-  let eventDate = new Date("May, 22, 2020 11:59:00")
-  let today = new Date()
+  const eventDate = new Date("May, 22, 2020 11:59:00")
+  const today = new Date()
   return eventDate - today
 }
 
 function days() {
-  let days = Math.floor( missingTime() / (1000 * 60 * 60 * 24));
+  const days = Math.floor( missingTime() / (1000 * 60 * 60 * 24));
   document.querySelector(".day > .num").innerHTML = days > 9 ? days : `0${days}`;
 }
 function hours() {
@@ -20,7 +20,6 @@ function seconds() {
   const seconds = Math.floor((missingTime() % (1000 * 60)) / 1000);
   document.querySelector(".sec > .num").innerHTML = seconds > 9 ? seconds : `0${seconds}`;
 }
-
 function expired() {
   document.querySelector(".countdown").innerHTML = '<span class="expired">TEMPO ESGOTADO!</span>';
 }
