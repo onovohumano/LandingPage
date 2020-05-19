@@ -10,6 +10,7 @@
 
 * {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 .brandlogo {
@@ -19,9 +20,8 @@
 .banner {
   background-color: #033BA7;
   color: #fff;
-  padding: 5% 10%;
+  padding: 10vh 10vw;
   height: fit-content;
-  flex-flow: nowrap;
 }
 
 .cta-watch-now {
@@ -34,17 +34,38 @@
   width: fit-content;
 }
 
+.cta-container {
+  justify-self: flex-end;
+  margin-top: 20%;
+}
+
 .cta-watch-now img {
   margin-left: 20px;
-  width: 50px;
 }
 
 .social-media {
+  height: 100%;
   align-self: flex-end;
+  justify-self: flex-start;
 }
 
 .banner-img {
-  max-width: 400px;
+  height: 100%;
+  width: 100%;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+@media (max-width: 764px) {
+  .banner {
+    padding: 7.5vh 5vw;
+  }
+  .img-banner-content {
+    display: none;
+  }
+  .social-media img {
+    width: 30px;
+  }
 }
 
 /* 
