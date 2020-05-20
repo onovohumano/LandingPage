@@ -43,6 +43,10 @@ section.row {
   height: fit-content;
 }
 
+#banner p {
+  line-height: 30px;
+}
+
 .brandlogo {
   width: 70px;
 }
