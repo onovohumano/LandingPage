@@ -115,6 +115,7 @@ section > .row {
 footer {
   height: 55px;
   background-color: #033BA7;
+  border-top: 1px solid #fff;
 }
 footer .row {
   padding: 0 5vw;
