@@ -36,10 +36,6 @@ section.row {
   background-image: linear-gradient( #1896A6, #18DEA6);
 }
 
-.horizontal-divider {
-  margin: 50px;
-}
-
 /*banner*/
 #banner {
   background-color: #033BA7;
