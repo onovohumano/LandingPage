@@ -35,3 +35,10 @@
 //     console.log(seconds + " seconds");
 //   }
 // }
+window.onload = () => {
+document.documentElement.addEventListener("mouseleave", () => {
+  $(document).ready(function(){
+    $("#exampleModal").modal('show');
+});
+})
+}
