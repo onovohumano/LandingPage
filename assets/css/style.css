@@ -70,12 +70,16 @@ section > .row {
 }
 
 /*Programacao*/
-.video {
+/* .video {
   border: 1px solid #000;
   width: 100%;
-}
-.comming-soon {
+} */
+/* .comming-soon {
   color: #352D63;
+} */
+.video-container {
+  max-width: 90%;
+  margin: auto auto;
 }
 
 /*countdown*/
